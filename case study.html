@@ -1,0 +1,776 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study | Evaluasi Website Sekolah</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f6f9ff;
+            color: #183153;
+            line-height: 1.7;
+        }
+
+        :root {
+            --primary: #2586e8;
+            --dark: #15345b;
+            --light: #eaf4ff;
+            --text: #65758b;
+            --white: #ffffff;
+        }
+
+        /* NAVBAR */
+        nav {
+            height: 75px;
+            padding: 0 8%;
+            background: rgba(255,255,255,.95);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 3px 20px rgba(0,0,0,.04);
+        }
+
+        .logo {
+            font-size: 21px;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .logo span {
+            color: var(--dark);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 28px;
+        }
+
+        nav ul a {
+            text-decoration: none;
+            color: var(--dark);
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        nav ul a:hover {
+            color: var(--primary);
+        }
+
+        /* HERO */
+        .hero {
+            padding: 100px 8%;
+            background: linear-gradient(120deg, #eaf5ff, #ffffff);
+            display: grid;
+            grid-template-columns: 1.2fr .8fr;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #dceeff;
+            color: #1478d4;
+            padding: 8px 17px;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 {
+            font-size: clamp(32px, 5vw, 52px);
+            line-height: 1.2;
+            color: var(--dark);
+            margin-bottom: 22px;
+        }
+
+        .hero h1 span {
+            color: var(--primary);
+        }
+
+        .hero p {
+            color: var(--text);
+            font-size: 15px;
+            max-width: 570px;
+            margin-bottom: 30px;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            padding: 13px 25px;
+            border-radius: 9px;
+            font-size: 13px;
+            font-weight: 700;
+            transition: .3s;
+        }
+
+        .hero-btn:hover {
+            background: #126bc4;
+            transform: translateY(-3px);
+        }
+
+        .hero-visual {
+            background: white;
+            border-radius: 22px;
+            padding: 18px;
+            box-shadow: 0 15px 50px rgba(37,134,232,.13);
+        }
+
+        .hero-visual img {
+            width: 100%;
+            height: 290px;
+            object-fit: cover;
+            border-radius: 14px;
+        }
+
+        .visual-caption {
+            padding: 16px 5px 5px;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        /* GENERAL SECTION */
+        section {
+            padding: 85px 8%;
+        }
+
+        .section-title {
+            margin-bottom: 40px;
+        }
+
+        .section-title small {
+            color: var(--primary);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .section-title h2 {
+            font-size: 32px;
+            color: var(--dark);
+            margin: 8px 0;
+        }
+
+        .section-title p {
+            color: var(--text);
+            font-size: 14px;
+            max-width: 650px;
+        }
+
+        /* OVERVIEW */
+        .overview {
+            background: white;
+        }
+
+        .overview-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .overview-card {
+            padding: 27px;
+            border: 1px solid #e9f0f8;
+            border-radius: 15px;
+            background: #fff;
+            transition: .3s;
+        }
+
+        .overview-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,.05);
+        }
+
+        .overview-card .number {
+            color: var(--primary);
+            font-size: 29px;
+            font-weight: 800;
+        }
+
+        .overview-card h3 {
+            font-size: 15px;
+            margin: 5px 0;
+        }
+
+        .overview-card p {
+            font-size: 12px;
+            color: var(--text);
+        }
+
+        /* FINDINGS */
+        .findings {
+            background: #f6f9ff;
+        }
+
+        .findings-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .finding-card {
+            background: white;
+            padding: 23px;
+            border-radius: 14px;
+            border: 1px solid #e9eff8;
+            transition: .3s;
+        }
+
+        .finding-card:hover {
+            border-color: #9dccff;
+            transform: translateY(-3px);
+        }
+
+        .finding-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+            gap: 10px;
+        }
+
+        .task {
+            font-size: 13px;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .score {
+            font-size: 17px;
+            font-weight: 800;
+            color: var(--dark);
+        }
+
+        .finding-card h3 {
+            font-size: 15px;
+            margin-bottom: 7px;
+        }
+
+        .finding-card p {
+            color: var(--text);
+            font-size: 12px;
+        }
+
+        .progress {
+            height: 7px;
+            background: #edf2f8;
+            border-radius: 20px;
+            margin-top: 15px;
+            overflow: hidden;
+        }
+
+        .progress span {
+            display: block;
+            height: 100%;
+            background: linear-gradient(90deg, #2586e8, #70baff);
+            border-radius: 20px;
+        }
+
+        /* RECOMMENDATIONS */
+        .recommendations {
+            background: white;
+        }
+
+        .recommendation-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .recommendation-card {
+            display: flex;
+            gap: 17px;
+            padding: 25px;
+            background: #f7faff;
+            border-radius: 14px;
+            border: 1px solid #e8f1fc;
+        }
+
+        .rec-number {
+            min-width: 38px;
+            height: 38px;
+            display: grid;
+            place-items: center;
+            border-radius: 10px;
+            background: #dceeff;
+            color: var(--primary);
+            font-weight: 800;
+        }
+
+        .recommendation-card h3 {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .recommendation-card p {
+            font-size: 12px;
+            color: var(--text);
+        }
+
+        /* CONCLUSION */
+        .conclusion {
+            background: linear-gradient(120deg, #153b69, #2586e8);
+            color: white;
+            text-align: center;
+        }
+
+        .conclusion h2 {
+            font-size: 30px;
+            margin-bottom: 17px;
+        }
+
+        .conclusion p {
+            max-width: 750px;
+            margin: auto;
+            color: #e1efff;
+            font-size: 14px;
+        }
+
+        .conclusion .hero-btn {
+            background: white;
+            color: var(--primary);
+            margin-top: 28px;
+        }
+
+        /* FOOTER */
+        footer {
+            padding: 25px 8%;
+            background: #102b4c;
+            color: #d0deef;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        /* RESPONSIVE */
+        @media(max-width: 850px) {
+            .hero {
+                grid-template-columns: 1fr;
+                padding-top: 65px;
+            }
+
+            .overview-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media(max-width: 600px) {
+            nav {
+                padding: 0 5%;
+            }
+
+            nav ul {
+                gap: 12px;
+            }
+
+            nav ul a {
+                font-size: 10px;
+            }
+
+            .hero {
+                padding: 65px 6%;
+            }
+
+            section {
+                padding: 65px 6%;
+            }
+
+            .findings-grid,
+            .recommendation-grid,
+            .overview-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title h2 {
+                font-size: 25px;
+            }
+
+            .hero-visual img {
+                height: 210px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<!-- NAVBAR -->
+<nav>
+    <a class="logo" href="index.html">WANDI<span>.PORTFOLIO</span></a>
+
+    <ul>
+        <li><a href="index.html">← Kembali ke Portofolio</a></li>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#findings">Findings</a></li>
+        <li><a href="#recommendations">Solutions</a></li>
+    </ul>
+</nav>
+
+
+<!-- HERO -->
+<header class="hero">
+
+    <div>
+        <span class="tag">UX/UI CASE STUDY</span>
+
+        <h1>
+            Evaluasi dan Analisis
+            <span>Website Sekolah</span>
+        </h1>
+
+        <p>
+            Studi kasus ini membahas hasil evaluasi pengalaman pengguna
+            terhadap website sekolah, dengan fokus pada kemudahan navigasi,
+            pencarian informasi, struktur konten, serta penyajian informasi
+            kepada pengguna.
+        </p>
+
+        <a href="#findings" class="hero-btn">
+            Lihat Hasil Analisis →
+        </a>
+        <a href="index.html" class="hero-btn">
+            Kembali ke Portofolio
+        </a>
+    </div>
+
+   
+<div class="hero-visual">
+    <img
+        src="sekolah.webp"
+        alt="Foto sekolah"
+        class="foto-case-study">
+
+    <div class="visual-caption">
+        Website Evaluation & User Experience
+        Smkn 19 Jakarta
+    </div>
+</div>
+
+</header>
+
+<!-- OVERVIEW -->
+<section class="overview" id="overview">
+
+    <div class="section-title">
+        <small>PROJECT OVERVIEW</small>
+        <h2>Ringkasan Proyek</h2>
+        <p>
+            Evaluasi dilakukan untuk mengetahui seberapa mudah pengguna
+            menemukan dan memahami berbagai informasi yang tersedia
+            pada website sekolah.
+        </p>
+    </div>
+
+    <div class="overview-grid">
+
+        <div class="overview-card">
+            <div class="number">10</div>
+            <h3>Total Task Evaluasi</h3>
+            <p>Sepuluh tugas pengujian untuk mengevaluasi akses informasi.</p>
+        </div>
+
+        <div class="overview-card">
+            <div class="number">10</div>
+            <h3>Temuan Masalah</h3>
+            <p>Hasil analisis dari setiap tugas yang diberikan kepada responden.</p>
+        </div>
+
+        <div class="overview-card">
+            <div class="number">06</div>
+            <h3>Fokus Perbaikan</h3>
+            <p>Enam area utama yang menjadi prioritas pengembangan website.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FINDINGS -->
+<section class="findings" id="findings">
+
+    <div class="section-title">
+        <small>RESEARCH RESULTS</small>
+        <h2>Analisis dan Temuan Masalah</h2>
+        <p>
+            Berikut merupakan hasil evaluasi dari sepuluh task
+            berdasarkan skor dan temuan pengalaman pengguna.
+        </p>
+    </div>
+
+    <div class="findings-grid">
+
+        <div class="finding-card">
+            <div class="finding-top">
+                <span class="task">TASK 01</span>
+                <span class="score">6,8</span>
+            </div>
+            <h3>Informasi Utama</h3>
+            <p>Informasi utama cukup dapat ditemukan, tetapi beberapa responden masih membutuhkan waktu untuk mengenali lokasinya.</p>
+            <div class="progress"><span style="width:68%"></span></div>
+        </div>
+
+        <div class="finding-card">
+            <div class="finding-top">
+                <span class="task">TASK 02</span>
+                <span class="score">6,4</span>
+            </div>
+            <h3>Profil Sekolah</h3>
+            <p>Profil sekolah relatif mudah ditemukan, walaupun posisinya belum selalu langsung terlihat.</p>
+            <div class="progress"><span style="width:64%"></span></div>
+        </div>
+
+        <div class="finding-card">
+            <div class="finding-top">
+                <span class="task">TASK 03</span>
+                <span class="score">6,4</span>
+            </div>
+            <h3>Informasi Akademik</h3>
+            <p>Informasi akademik masih perlu penataan yang lebih jelas agar pengguna tidak perlu berpindah-pindah menu.</p>
+            <div class="progress"><span style="width:64%"></span></div>
+        </div>
+
+        <div class="finding-card">
+            <div class="finding-top">
+                <span class="task">TASK 04</span>
+                <span class="score">6,0</span>
+            </div>
+            <h3>Informasi Jurusan</h3>
+            <p>Informasi jurusan dapat ditemukan melalui menu, tetapi belum menjadi informasi yang paling menonjol.</p>
+            <div class="progress"><span style="width:60%"></span></div>
+        </div>
+
+        <div class="finding-card">
+            <div class="finding-top">
+                <span class="task">TASK 05</span>
+                <span class="score">6,2</span>
+            </div>
+            <h3>Sarana dan Prasarana</h3>
+            <p>Informasi sarana dan prasarana cukup sulit ditemukan dan memperoleh nilai relatif rendah.</p>
+            <div class="progress"><span style="width:62%"></span></div>
+        </div>
+
+        <div class="finding-card">
+            <div class="finding-top">
+                <span class="task">TASK 06</span>
+                <span class="score">5,6</span>
+            </div>
+            <h3>Kegiatan Siswa</h3>
+            <p>Informasi kegiatan siswa cukup membantu, tetapi penyajiannya dapat dibuat lebih mudah dipindai.</p>
+            <div class="progress"><span style="width:56%"></span></div>
+        </div>
+
+        <div class="finding-card">
+            <div class="finding-top">
+                <span class="task">TASK 07</span>
+                <span class="score">6,4</span>
+            </div>
+            <h3>Kerja Sama dan Kemitraan</h3>
+            <p>Informasi kerja sama dan kemitraan merupakan bagian yang paling sulit ditemukan oleh pengguna.</p>
+            <div class="progress"><span style="width:64%"></span></div>
+        </div>
+
+        <div class="finding-card">
+            <div class="finding-top">
+                <span class="task">TASK 08</span>
+                <span class="score">6,8</span>
+            </div>
+            <h3>Berita dan Pengumuman</h3>
+            <p>Berita dan pengumuman relatif mudah ditemukan dibandingkan beberapa informasi lainnya.</p>
+            <div class="progress"><span style="width:68%"></span></div>
+        </div>
+
+        <div class="finding-card">
+            <div class="finding-top">
+                <span class="task">TASK 09</span>
+                <span class="score">5,8</span>
+            </div>
+            <h3>Visualisasi Data</h3>
+            <p>Informasi dalam bentuk visualisasi data cukup mudah dipahami, tetapi tampilannya masih dapat diperjelas.</p>
+            <div class="progress"><span style="width:58%"></span></div>
+        </div>
+
+        <div class="finding-card">
+            <div class="finding-top">
+                <span class="task">TASK 10</span>
+                <span class="score">5,2</span>
+            </div>
+            <h3>Menu Lainnya</h3>
+            <p>Informasi tambahan melalui menu lainnya cukup mudah ditemukan meskipun beberapa pilihan masih perlu dicari.</p>
+            <div class="progress"><span style="width:52%"></span></div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- BEFORE & AFTER -->
+<
+<section class="comparison-container">
+
+    <div class="comparison-grid">
+
+        <!-- BEFORE -->
+        <div class="comparison-card">
+
+            <div class="comparison-label before-label">
+                BEFORE
+            </div>
+
+            <img src="sekolah2.png"
+                 alt="Website sekolah sebelum perbaikan">
+
+            <h3>Sebelum Perbaikan</h3>
+
+            <p>
+                Tampilan awal website sekolah dengan navigasi
+                dan penyajian informasi yang masih perlu ditingkatkan.
+            </p>
+
+        </div>
+
+        <!-- AFTER -->
+        <div class="comparison-card">
+
+            <div class="comparison-label after-label">
+                AFTER
+            </div>
+
+            <img src="img/after.png"
+                 alt="Website sekolah setelah perbaikan">
+
+            <h3>Sesudah Perbaikan</h3>
+
+            <p>
+                Tampilan website setelah diperbaiki dengan
+                navigasi lebih jelas, struktur informasi terorganisir,
+                dan desain yang lebih modern.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- END BEFORE & AFTER -->
+
+
+<!-- RECOMMENDATIONS -->
+<section class="recommendations" id="recommendations">
+
+    <div class="section-title">
+        <small>IMPROVEMENT PLAN</small>
+        <h2>Rekomendasi Perbaikan</h2>
+        <p>
+            Berdasarkan hasil evaluasi, terdapat beberapa rekomendasi
+            yang dapat diterapkan untuk meningkatkan kualitas
+            pengalaman pengguna pada website sekolah.
+        </p>
+    </div>
+
+    <div class="recommendation-grid">
+
+        <div class="recommendation-card">
+            <div class="rec-number">01</div>
+            <div>
+                <h3>Optimalisasi Navigasi</h3>
+                <p>Membuat navigasi menuju informasi utama dan profil sekolah lebih menonjol agar mudah ditemukan.</p>
+            </div>
+        </div>
+
+        <div class="recommendation-card">
+            <div class="rec-number">02</div>
+            <div>
+                <h3>Struktur Informasi Akademik</h3>
+                <p>Mengelompokkan informasi akademik, jurusan, dan pembelajaran dalam struktur menu yang lebih jelas.</p>
+            </div>
+        </div>
+
+        <div class="recommendation-card">
+            <div class="rec-number">03</div>
+            <div>
+                <h3>Informasi Sarana dan Prasarana</h3>
+                <p>Menambahkan menu khusus sarana dan prasarana yang dilengkapi foto serta deskripsi singkat.</p>
+            </div>
+        </div>
+
+        <div class="recommendation-card">
+            <div class="rec-number">04</div>
+            <div>
+                <h3>Tampilan Kegiatan Siswa</h3>
+                <p>Menampilkan kegiatan siswa menggunakan kartu atau daftar yang lebih menarik dan mudah dipindai.</p>
+            </div>
+        </div>
+
+        <div class="recommendation-card">
+            <div class="rec-number">05</div>
+            <div>
+                <h3>Informasi Kemitraan</h3>
+                <p>Menyediakan menu khusus untuk informasi kerja sama dan kemitraan agar lebih mudah diakses.</p>
+            </div>
+        </div>
+
+        <div class="recommendation-card">
+            <div class="rec-number">06</div>
+            <div>
+                <h3>Berita dan Pengumuman</h3>
+                <p>Mempertahankan akses berita yang mudah serta menonjolkan informasi dan pengumuman terbaru.</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CONCLUSION -->
+<section class="conclusion">
+
+    <h2>Kesimpulan Case Study</h2>
+
+    <p>
+        Hasil evaluasi menunjukkan bahwa website sekolah sudah memiliki
+        informasi yang cukup lengkap dan beberapa bagian dapat ditemukan
+        dengan relatif mudah. Namun, masih terdapat beberapa kendala pada
+        struktur navigasi, pengelompokan informasi, dan tampilan konten.
+        Melalui rekomendasi perbaikan yang telah disusun, diharapkan
+        website sekolah dapat memberikan pengalaman pengguna yang lebih
+        baik, informatif, mudah dipahami, dan efisien dalam mengakses
+        berbagai kebutuhan informasi sekolah.
+    </p>
+
+    <a href="#overview" class="hero-btn">
+        Kembali ke Atas ↑
+    </a>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 WANDI M SIDIQ | UX/UI Case Study</p>
+    <p>Website Evaluation & User Experience Design</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,877 @@
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <!-- 1. PENGATURAN WEBSITE -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portofolio Wandi M Sidiq - Siswa RPL, Web Developer dan UI/UX Designer">
+
+    <title>WANDI M SIDIQ | Portofolio</title>
+
+    <!-- 2. MENGHUBUNGKAN CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- 3. FONT AWESOME UNTUK ICON -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- =================================== -->
+    <!-- 4. NAVBAR / MENU NAVIGASI -->
+    <!-- =================================== -->
+
+    <header class="header">
+
+        <nav class="navbar">
+
+            <!-- LOGO -->
+            <a href="#beranda" class="logo">
+                W<span>.</span>
+            </a>
+
+            <!-- MENU NAVIGASI -->
+            <ul class="nav-menu" id="navMenu">
+
+                <li><a href="#beranda" class="active">Beranda</a></li>
+
+                <li><a href="#tentang">Tentang</a></li>
+
+                <li><a href="#keahlian">Keahlian</a></li>
+
+                <li><a href="#proyek">Proyek</a></li>
+
+                <li><a href="#figma">Figma</a></li>
+
+                <li><a href="case study.html">Case Study</a></li>
+
+                <li><a href="#kontak">Kontak</a></li>
+
+            </ul>
+
+            <!-- TOMBOL NAVBAR -->
+            <a href="case study.html" class="nav-button">
+                Buka Studi Kasus
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <!-- MENU MOBILE -->
+            <button class="menu-toggle" id="menuToggle"
+                type="button"
+                aria-label="Buka menu navigasi"
+                aria-expanded="false">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- =================================== -->
+        <!-- 5. HERO / TAMPILAN BERANDA -->
+        <!-- =================================== -->
+
+        <section class="hero" id="beranda">
+
+            <!-- TEKS PERKENALAN -->
+            <div class="hero-content">
+
+                <span class="hello">
+                    <i class="fa-solid fa-hand"></i>
+                    HALO, SELAMAT DATANG
+                </span>
+
+                <h1>
+                    Saya Wandi
+                    <br>
+                    <span>M Sidiq</span>
+                </h1>
+
+                <!-- ANIMASI TEKS -->
+                <h2>
+                    <span id="typing">Siswa RPL</span>
+                    <span>|</span>
+                </h2>
+
+                <!-- DESKRIPSI -->
+                <p>
+                    Saya adalah siswa Rekayasa Perangkat Lunak (RPL)
+                    yang tertarik pada pengembangan website dan desain UI/UX.
+
+                    Saya senang membuat tampilan website yang modern,
+                    menarik, responsif, dan mudah digunakan.
+                </p>
+
+                <!-- TOMBOL BERANDA -->
+                <div class="hero-buttons">
+
+                    <a href="#proyek" class="btn-primary">
+                        Lihat Proyek
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                    <a href="#kontak" class="btn-outline">
+                        Hubungi Saya
+                    </a>
+
+                </div>
+
+                <!-- BIDANG MINAT -->
+                <div class="social">
+
+                    <a href="#keahlian">Web Development</a>
+
+                    <a href="#keahlian">UI/UX Design</a>
+
+                    <a href="#figma">Figma</a>
+
+                </div>
+
+            </div>
+
+
+            <!-- 6. FOTO PROFIL -->
+            <div class="hero-image">
+
+                <div class="image-circle">
+
+                    <!-- GANTI FOTO PROFIL DI SINI -->
+                    <img src="jpg 1.jpeg"
+                         alt="Foto Wandi M Sidiq">
+
+                </div>
+
+                <!-- KARTU WEB DEVELOPER -->
+                <div class="floating-card">
+
+                    <span>
+                        <i class="fa-solid fa-code"></i>
+                    </span>
+
+                    <div>
+                        <strong>Web Developer</strong>
+                        <small>Belajar sambil berkarya</small>
+                    </div>
+
+                </div>
+
+                <!-- KARTU FIGMA -->
+                <div class="floating-card second-card">
+
+                    <span>
+                        <i class="fa-brands fa-figma"></i>
+                    </span>
+
+                    <div>
+                        <strong>UI/UX Design</strong>
+                        <small>Ide menjadi rancangan</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================== -->
+        <!-- 7. STATISTIK / BIDANG KEMAMPUAN -->
+        <!-- =================================== -->
+
+        <section class="statistics">
+
+            <article class="stat-card">
+
+                <i class="fa-solid fa-laptop-code"></i>
+
+                <h3>Web Development</h3>
+
+                <p>Membangun website modern</p>
+
+            </article>
+
+
+            <article class="stat-card">
+
+                <i class="fa-solid fa-pen-ruler"></i>
+
+                <h3>UI/UX Design</h3>
+
+                <p>Merancang tampilan website</p>
+
+            </article>
+
+
+            <article class="stat-card">
+
+                <i class="fa-brands fa-figma"></i>
+
+                <h3>Figma</h3>
+
+                <p>Membuat mockup dan prototype</p>
+
+            </article>
+
+        </section>
+
+
+        <!-- =================================== -->
+        <!-- 8. TENTANG SAYA -->
+        <!-- =================================== -->
+
+        <section class="section about" id="tentang">
+
+            <div class="section-heading reveal">
+
+                <span>TENTANG SAYA</span>
+
+                <h2>
+                    Kenalan lebih dekat
+                    <b>dengan saya</b>
+                </h2>
+
+                <p>
+                    Mengenal lebih jauh tentang diri saya,
+                    pendidikan, dan minat dalam dunia teknologi.
+                </p>
+
+            </div>
+
+
+            <div class="about-content">
+
+                <!-- DESKRIPSI PROFIL -->
+                <div class="about-box reveal">
+
+                    <span class="small-label">
+                        PROFIL SINGKAT
+                    </span>
+
+                    <h3>Halo, saya Wandi M Sidiq</h3>
+
+                    <p>
+                        Saya adalah siswa Rekayasa Perangkat Lunak (RPL)
+                        yang memiliki minat pada pengembangan website,
+                        pemrograman, serta desain UI/UX.
+                    </p>
+
+                    <p>
+                        Saya terus mengembangkan kemampuan melalui
+                        berbagai proyek dan latihan, mulai dari membuat
+                        website menggunakan HTML, CSS, JavaScript,
+                        hingga merancang tampilan menggunakan Figma.
+                    </p>
+
+                    <a href="#proyek" class="btn-primary">
+                        Jelajahi Proyek
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+
+                <!-- INFORMASI PROFIL -->
+                <div class="about-info">
+
+                    <article class="info-card">
+
+                        <span>
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </span>
+
+                        <h3>Pendidikan</h3>
+
+                        <p>Siswa Rekayasa Perangkat Lunak</p>
+
+                    </article>
+
+
+                    <article class="info-card">
+
+                        <span>
+                            <i class="fa-solid fa-code"></i>
+                        </span>
+
+                        <h3>Fokus</h3>
+
+                        <p>Web Development dan UI/UX</p>
+
+                    </article>
+
+
+                    <article class="info-card">
+
+                        <span>
+                            <i class="fa-solid fa-lightbulb"></i>
+                        </span>
+
+                        <h3>Prinsip</h3>
+
+                        <p>Kreatif, inovatif, dan fungsional</p>
+
+                    </article>
+
+
+                    <article class="info-card">
+
+                        <span>
+                            <i class="fa-solid fa-users"></i>
+                        </span>
+
+                        <h3>Kolaborasi</h3>
+
+                        <p>Terbuka untuk belajar bersama</p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================== -->
+        <!-- 9. KEAHLIAN / SKILLS -->
+        <!-- =================================== -->
+
+        <section class="section" id="keahlian">
+
+            <div class="section-heading reveal">
+
+                <span>KEAHLIAN</span>
+
+                <h2>
+                    Kemampuan yang
+                    <b>saya pelajari</b>
+                </h2>
+
+                <p>
+                    Beberapa teknologi dan bidang yang sedang
+                    saya kembangkan.
+                </p>
+
+            </div>
+
+
+            <div class="skills-grid">
+
+                <!-- HTML CSS JAVASCRIPT -->
+                <article class="skill-card reveal">
+
+                    <span>
+                        <i class="fa-solid fa-code"></i>
+                    </span>
+
+                    <h3>Web Development</h3>
+
+                    <p>
+                        Membuat website menggunakan teknologi
+                        pengembangan web.
+                    </p>
+
+                    <div class="tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+
+                </article>
+
+
+                <!-- UI UX DESIGN -->
+                <article class="skill-card reveal">
+
+                    <span>
+                        <i class="fa-solid fa-object-group"></i>
+                    </span>
+
+                    <h3>UI/UX Design</h3>
+
+                    <p>
+                        Merancang antarmuka dan pengalaman
+                        pengguna yang mudah dipahami.
+                    </p>
+
+                    <div class="tags">
+                        <span>Wireframe</span>
+                        <span>UI Design</span>
+                        <span>UX</span>
+                    </div>
+
+                </article>
+
+
+                <!-- FIGMA -->
+                <article class="skill-card reveal">
+
+                    <span>
+                        <i class="fa-brands fa-figma"></i>
+                    </span>
+
+                    <h3>Figma</h3>
+
+                    <p>
+                        Membuat desain tampilan, mockup,
+                        dan prototype interaktif.
+                    </p>
+
+                    <div class="tags">
+                        <span>Mockup</span>
+                        <span>Prototype</span>
+                        <span>Layout</span>
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================== -->
+        <!-- 10. PROYEK PORTOFOLIO -->
+        <!-- =================================== -->
+
+        <section class="section projects" id="proyek">
+
+            <div class="section-heading reveal">
+
+                <span>PORTOFOLIO</span>
+
+                <h2>
+                    Proyek pilihan
+                    <b>saya</b>
+                </h2>
+
+                <p>
+                    Beberapa proyek dan hasil eksplorasi
+                    yang telah saya kerjakan.
+                </p>
+
+            </div>
+
+
+            <div class="project-grid">
+
+
+                <!-- PROYEK 1: WEBSITE SEKOLAH -->
+                <article class="project-card reveal">
+
+                    <div class="project-image">
+
+                        <img src="img/sekolah.png"
+                             alt="Tampilan website sekolah">
+
+                        <span class="project-category">
+                            STUDI KASUS · UI/UX
+                        </span>
+
+                    </div>
+
+
+                    <div class="project-info">
+
+                        <h3>Evaluasi Website Sekolah</h3>
+
+                        <p>
+                            Studi kasus evaluasi website sekolah
+                            untuk meningkatkan navigasi, tampilan,
+                            dan penyajian informasi.
+                        </p>
+
+                        <div class="tags">
+                            <span>UX Research</span>
+                            <span>Website</span>
+                            <span>Evaluasi</span>
+                        </div>
+
+                        <a href="case study.html" class="project-link">
+                            Baca Case Study
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PROYEK 2: APLIKASI BELAJAR -->
+                <article class="project-card reveal">
+
+                    <div class="project-image">
+
+                        <img src="img/aplikasi.png"
+                             alt="Tampilan aplikasi belajar">
+
+                        <span class="project-category">
+                            KONSEP UI/UX · FIGMA
+                        </span>
+
+                    </div>
+
+
+                    <div class="project-info">
+
+                        <h3>Aplikasi Belajar</h3>
+
+                        <p>
+                            Konsep aplikasi belajar yang dirancang
+                            untuk memudahkan pengguna mengakses
+                            materi dan melihat progres belajar.
+                        </p>
+
+                        <div class="tags">
+                            <span>Figma</span>
+                            <span>Mobile UI</span>
+                            <span>Prototype</span>
+                        </div>
+
+                        <!-- GANTI LINK FIGMA -->
+                        <a href="https://www.figma.com/design/XNftm4V4qUVb5eRcHOWqI3/Untitled?node-id=0-1&m=dev&t=wYGAHV83X367Zksk-1"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="project-link">
+
+                            Lihat Mockup
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PROYEK 3: WEBSITE PORTOFOLIO -->
+                <article class="project-card reveal">
+
+                    <div class="project-image">
+
+                        <img src="img/portfolio.png"
+                             alt="Tampilan website portofolio">
+
+                        <span class="project-category">
+                            WEB DESIGN · HTML & CSS
+                        </span>
+
+                    </div>
+
+
+                    <div class="project-info">
+
+                        <h3>Website Portofolio</h3>
+
+                        <p>
+                            Website pribadi untuk memperkenalkan
+                            profil, kemampuan, dan hasil karya
+                            dalam bidang teknologi.
+                        </p>
+
+                        <div class="tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>Responsive</span>
+                        </div>
+
+                        <a href="#beranda" class="project-link">
+                            Lihat Website
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================== -->
+        <!-- 11. MOCKUP DAN PROTOTYPE FIGMA -->
+        <!-- =================================== -->
+
+        <section class="section figma-section" id="figma">
+
+            <div class="section-heading reveal">
+
+                <span>EKSPLORASI DESAIN</span>
+
+                <h2>
+                    Desain aplikasi
+                    <b>menggunakan Figma</b>
+                </h2>
+
+                <p>
+                    Hasil rancangan antarmuka dan prototype
+                    aplikasi yang saya buat.
+                </p>
+
+            </div>
+
+
+            <article class="figma-feature reveal">
+
+                <!-- GAMBAR MOCKUP -->
+                <div class="figma-preview">
+
+                    <img src="sekolah2.png"
+                         alt="Preview desain aplikasi Figma">
+
+                    <span class="preview-label">
+                        <i class="fa-brands fa-figma"></i>
+                        Konsep UI/UX di Figma
+                    </span>
+
+                </div>
+
+
+                <!-- DESKRIPSI FIGMA -->
+                <div class="figma-description">
+
+                    <span class="small-label">
+                        KONSEP PROYEK
+                    </span>
+
+                    <h3>Aplikasi Belajar</h3>
+
+                    <p>
+                        Rancangan aplikasi belajar dengan
+                        tampilan sederhana dan navigasi yang jelas.
+
+                        Desain ini berfokus pada kemudahan
+                        pengguna dalam melihat materi,
+                        progres belajar, dan rekomendasi kelas.
+                    </p>
+
+                    <div class="tags">
+                        <span>Dashboard</span>
+                        <span>Mobile UI</span>
+                        <span>Prototype</span>
+                    </div>
+
+
+                    <!-- GANTI LINK DENGAN LINK FIGMA ASLI -->
+                    <div class="figma-buttons">
+
+                        <a href="https://www.figma.com/design/XNftm4V4qUVb5eRcHOWqI3/Untitled?node-id=0-1&m=dev&t=wYGAHV83X367Zksk-1"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="btn-primary">
+
+                            Lihat Mockup
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                        </a>
+
+
+                        <a href="https://www.figma.com/"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="btn-outline">
+
+                            Buka Prototype
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <!-- =================================== -->
+        <!-- 12. KONTAK / HUBUNGI SAYA -->
+        <!-- =================================== -->
+
+        <section class="section contact" id="kontak">
+
+            <div class="section-heading reveal">
+
+                <span>KONTAK</span>
+
+                <h2>
+                    Mari
+                    <b>terhubung</b>
+                </h2>
+
+                <p>
+                    Silakan hubungi saya untuk berdiskusi
+                    atau bertukar ide mengenai proyek.
+                </p>
+
+            </div>
+
+
+            <div class="contact-container reveal">
+
+
+                <!-- INFORMASI KONTAK -->
+                <div class="contact-info">
+
+                    <span class="small-label">
+                        INFORMASI KONTAK
+                    </span>
+
+                    <h3>Hubungi Saya</h3>
+
+                    <p>
+                        Saya terbuka untuk belajar,
+                        berdiskusi, dan berkolaborasi.
+                    </p>
+
+
+                    <!-- WHATSAPP -->
+                    <a href="https://wa.me/6283820544078"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="contact-item">
+
+                        <i class="fa-brands fa-whatsapp"></i>
+
+                        <span>
+                            <strong>WhatsApp</strong>
+                            <p>0838 2054 4078</p>
+                        </span>
+
+                    </a>
+
+
+                    <!-- BIDANG MINAT -->
+                    <div class="contact-item">
+
+                        <i class="fa-solid fa-laptop-code"></i>
+
+                        <span>
+                            <strong>Bidang Minat</strong>
+                            <p>Web Development dan UI/UX</p>
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FORMULIR KONTAK -->
+                <form id="contactForm">
+
+                    <h3>Kirim Pesan</h3>
+
+                    <input type="text"
+                           id="name"
+                           placeholder="Nama kamu"
+                           required>
+
+                    <input type="email"
+                           id="email"
+                           placeholder="Alamat email"
+                           required>
+
+                    <textarea id="message"
+                              rows="5"
+                              placeholder="Tulis pesan kamu..."
+                              required></textarea>
+
+                    <button type="submit" class="btn-primary">
+
+                        Kirim lewat WhatsApp
+                        <i class="fa-solid fa-paper-plane"></i>
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================== -->
+        <!-- 13. AJAKAN BERKOLABORASI -->
+        <!-- =================================== -->
+
+        <section class="cta-section reveal">
+
+            <div>
+
+                <span>ADA IDE MENARIK?</span>
+
+                <h2>Mari buat sesuatu bersama.</h2>
+
+                <p>
+                    Saya terbuka untuk belajar,
+                    berdiskusi, dan mengembangkan ide baru.
+                </p>
+
+            </div>
+
+            <a href="#kontak" class="btn-primary">
+                Hubungi Saya
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- =================================== -->
+    <!-- 14. FOOTER / BAGIAN BAWAH WEBSITE -->
+    <!-- =================================== -->
+
+    <footer class="footer">
+
+        <p>
+            © <span id="year"></span>
+            Wandi M Sidiq. Dibuat dengan semangat belajar.
+        </p>
+
+
+        <div class="footer-social">
+
+            <a href="#beranda" aria-label="Beranda">
+                <i class="fa-solid fa-house"></i>
+            </a>
+
+            <a href="https://wa.me/6283820544078"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="WhatsApp">
+
+                <i class="fa-brands fa-whatsapp"></i>
+
+            </a>
+
+        </div>
+
+
+        <a href="#beranda" class="back-top">
+            Kembali ke atas ↑
+        </a>
+
+    </footer>
+
+
+    <!-- =================================== -->
+    <!-- 15. MENGHUBUNGKAN JAVASCRIPT -->
+    <!-- =================================== -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>
